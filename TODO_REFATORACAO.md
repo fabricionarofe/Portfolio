@@ -11,14 +11,6 @@ Esses arquivos possuem exatamente o mesmo codigo. Para manter o Principio DRY, u
 - `web-scraping-gdoc\.gitignore`
 
 ### Duplicata encontrada:
-- `automacao-de-mensagem\requirements.txt`
-- `reconhecimento-facial\requirements.txt`
-- `sistema-de-contratos\requirements.txt`
-- `SistemaPatrimonio\requirements.txt`
-- `site-de-vendas\requirements.txt`
-- `web-scraping-gdoc\requirements.txt`
-
-### Duplicata encontrada:
 - `automacao-de-mensagem\__version__.py`
 - `automacao-de-mensagem\src\__version__.py`
 - `reconhecimento-facial\__version__.py`
@@ -30,4 +22,9 @@ Esses arquivos possuem exatamente o mesmo codigo. Para manter o Principio DRY, u
 ### Duplicata encontrada:
 - `sistema-de-contratos\main.py`
 - `SistemaPatrimonio\main.py`
+
+### Duplicata encontrada:
+- `sistema-de-contratos\requirements.txt`
+- `SistemaPatrimonio\requirements.txt`
+- `site-de-vendas\requirements.txt`
 
