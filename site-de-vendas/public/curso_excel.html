@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Excel - O Guia Definitivo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F9F8F6; /* Tom creme minimalista */
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho Global FA Academy */
+        .global-header {
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FAFAFA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+        .global-header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            color: #1A1A1A;
+        }
+        .global-header nav a {
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: #1A1A1A;
+            margin-left: 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        .global-header nav a:hover {
+            color: #999;
+        }
+        @media (max-width: 768px) {
+            .global-header nav { display: none; }
+        }
+
+        .book-container {
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            background: #FFFFFF;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease-in-out;
+            transform: translateX(50px);
+        }
+
+        .page.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: none;
+            border: 1px solid #CCC;
+            padding: 10px 25px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+
+        button:hover {
+            background: #1A1A1A;
+            color: #FFF;
+            border-color: #1A1A1A;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Global -->
+    <header class="global-header">
+        <a href="fa_academy.html" class="logo">FA Academy</a>
+        <nav>
+            <a href="fa_academy.html">Início</a>
+            <a href="fa_academy.html#cursos">Cursos</a>
+            <a href="/login">Área de Membros</a>
+        </nav>
+    </header>
+
+    <div class="book-container">
+        <!-- Capa -->
+        <div class="page active" id="page-1">
+            <h1>Dominando o Excel</h1>
+            <p>Bem-vindo ao método minimalista para organizar sua vida financeira.</p>
+            <p>Neste material, você não aprenderá fórmulas complexas que nunca vai usar. Focaremos apenas nos 20% do Excel que trazem 80% dos resultados.</p>
+        </div>
+
+        <!-- Página 2 -->
+        <div class="page" id="page-2">
+            <h2>Capítulo 1: A Lógica das Células</h2>
+            <p>O Excel não é um bicho de sete cabeças. Pense nele como um enorme caderno de anotações quadriculado. Cada quadrado é uma célula...</p>
+            <p><i>(O senhor pode substituir este texto com o conteúdo do curso que deseja replicar)</i></p>
+        </div>
+
+        <!-- Página 3 -->
+        <div class="page" id="page-3">
+            <h2>Capítulo 2: Fórmulas Essenciais</h2>
+            <p>A única coisa que você precisa saber para começar qualquer cálculo é o sinal de igual ( = ). Ao digitar "=", você avisa ao Excel que fará uma mágica.</p>
+            <p>Exemplo: <b>=SOMA(A1:A10)</b></p>
+        </div>
+
+        <div class="controls">
+            <button onclick="mudarPagina(-1)">← Voltar</button>
+            <button onclick="mudarPagina(1)">Avançar →</button>
+        </div>
+    </div>
+
+    <script>
+        let paginaAtual = 1;
+        const totalPaginas = 3;
+
+        function mudarPagina(direcao) {
+            document.getElementById(`page-${paginaAtual}`).classList.remove('active');
+            
+            paginaAtual += direcao;
+            
+            if (paginaAtual < 1) paginaAtual = 1;
+            if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
+            
+            document.getElementById(`page-${paginaAtual}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

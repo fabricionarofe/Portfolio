@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA Academy | Excelência em Cursos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+        :root {
+            --bg-color: #FAFAFA;
+            --text-dark: #1A1A1A;
+            --text-light: #555555;
+            --accent: #E5E0D8; /* Bege suave e neutro */
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Tipografia Sofisticada */
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* Cabeçalho de Navegação */
+        header {
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        /* Estrutura de Seções */
+        .section {
+            padding: 120px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section (Topo) */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            gap: 60px;
+            padding-top: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            height: 650px;
+            background-color: var(--accent);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(10%) contrast(1.1); /* Toque elegante na foto */
+        }
+
+        /* Botão Minimalista */
+        .btn {
+            display: inline-block;
+            padding: 16px 45px;
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid var(--text-dark);
+            transition: all 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-dark);
+        }
+
+        /* Grid de Cursos */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            margin-top: 70px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+            transition: transform 0.5s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .course-image {
+            height: 280px;
+            background-color: var(--accent);
+            overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .course-card:hover .course-image img {
+            transform: scale(1.05);
+        }
+
+        .course-content {
+            padding: 40px 30px;
+        }
+
+        .course-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .course-title {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .course-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .course-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 6px;
+            transition: opacity 0.3s;
+        }
+
+        .course-link:hover {
+            opacity: 0.5;
+        }
+
+        /* Rodapé Minimalista */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: #AAA;
+            letter-spacing: 1px;
+        }
+
+        /* Responsividade para Celular */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 40px;
+            }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 40px auto; }
+            .hero-image { height: 400px; width: 100%; }
+            nav { display: none; } /* Oculta o menu longo no mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="fa_academy.html" class="logo">FA Academy</a>
+        <nav>
+            <a href="fa_academy.html">Início</a>
+            <a href="fa_academy.html#cursos">Cursos</a>
+            <a href="/login">Área de Membros</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="section hero">
+        <div class="hero-text">
+            <h1>O Conhecimento que Transforma.</h1>
+            <p>Descubra cursos criados para elevar o seu potencial. Uma experiência de aprendizado focada em excelência, técnica e resultados reais para a sua carreira.</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="#cursos" class="btn">Explorar Cursos</a>
+                <a href="/login" class="btn" style="background-color: transparent; color: var(--text-dark);">Acessar Área de Membros</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Imagem baseada em estudo/foco vinda do Unsplash -->
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1470&auto=format&fit=crop" alt="Ambiente de Estudo e Foco">
+        </div>
+    </section>
+
+    <section id="sobre" class="section" style="text-align: center; max-width: 800px; padding: 80px 5%;">
+        <h2 style="font-size: 2.6rem; margin-bottom: 30px;">A Nova Era da Educação</h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8;">
+            A FA Academy nasceu com um propósito claro: entregar conteúdo de alto padrão para mentes ambiciosas. 
+            Sem excessos, sem distrações. Apenas o essencial ensinado por quem entende, para que você alcance 
+            a maestria na sua área de atuação.
+        </p>
+    </section>
+
+    <section id="cursos" class="section">
+        <h2 style="font-size: 2.6rem; text-align: center; margin-bottom: 15px;">Nossos Cursos</h2>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 60px;">Especializações focadas no seu desenvolvimento profissional.</p>
+
+        <div class="courses-grid">
+            
+            <!-- Curso 1: Manicure (Linkado para a página que você já possui) -->
+            <div class="course-card">
+                <div class="course-image">
+                    <!-- O sistema tenta carregar a sua foto local, se não achar, usa uma padrão elegante do Unsplash -->
+                    <img src="FOTOS/Female_hands_with_red_nails_202606102139.jpeg" alt="Curso de Manicure" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1469&auto=format&fit=crop'">
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Estética & Beleza</span>
+                    <h3 class="course-title">Masterclass Cutilagem Perfeita</h3>
+                    <p class="course-desc">Domine a arte da cutilagem com técnicas seguras e acabamento de alto padrão para fidelizar clientes e lotar sua agenda.</p>
+                    <a href="curso_manicure.html" class="course-link">Visualizar Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 2: Maquiagem -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=1471&auto=format&fit=crop" alt="Curso de Maquiagem">
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Estética & Beleza</span>
+                    <h3 class="course-title">Maquiagem Profissional</h3>
+                    <p class="course-desc">Aprenda desde a preparação avançada da pele até técnicas detalhadas de visagismo, contorno e iluminação.</p>
+                    <a href="javascript:void(0)" class="course-link" style="opacity: 0.5; cursor: default;">Em Breve</a>
+                </div>
+            </div>
+
+            <!-- Curso 3: Excel -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1430&auto=format&fit=crop" alt="Curso de Excel">
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Negócios & Gestão</span>
+                    <h3 class="course-title">Excel para Negócios</h3>
+                    <p class="course-desc">Do absoluto básico às macros automatizadas. Torne-se um profissional indispensável dominando a análise de dados.</p>
+                    <a href="javascript:void(0)" class="course-link" style="opacity: 0.5; cursor: default;">Em Breve</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-logo">FA Academy</div>
+        <p class="footer-text">Elevando padrões. Transformando carreiras.</p>
+        <p class="footer-text" style="margin-top: 40px; opacity: 0.4; font-size: 0.75rem;">&copy; 2024 FA Academy. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

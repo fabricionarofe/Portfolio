@@ -1,0 +1,9 @@
+@echo off
+echo Iniciando o Carometro Web...
+cd /d "%~dp0"
+echo Instalando dependencias (isso garante que o Flask fique na pasta certa)...
+".\meu_ambiente\Scripts\python.exe" -m pip install flask opencv-python face-recognition numpy
+echo O servidor esta sendo carregado. O navegador abrira automaticamente em instantes...
+start "Servidor Carometro" cmd /k ".\meu_ambiente\Scripts\python.exe app.py"
+timeout /t 8 /nobreak >nul
+start "" "http://[IP_REMOVED]:5000"

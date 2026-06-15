@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carômetro - Reconhecimento Facial</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; margin: 0; padding: 20px; }
+        h1 { color: #333; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        img { width: 100%; max-width: 640px; border: 3px solid #ddd; border-radius: 5px; }
+        .btn { background-color: #007bff; color: white; border: none; padding: 12px 25px; font-size: 16px; cursor: pointer; border-radius: 5px; margin: 10px; font-weight: bold;}
+        .btn:hover { background-color: #0056b3; }
+        .status { margin-top: 15px; font-weight: bold; font-size: 18px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carômetro Inteligente</h1>
+        
+        <div>
+            <!-- O feed de vídeo ao vivo processado pelo Python aparece aqui -->
+            <img id="video" src="{{ url_for('video_feed') }}" alt="Carregando Câmera...">
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button class="btn" onclick="cadastrarRosto()">Cadastrar Meu Rosto Agora</button>
+        </div>
+
+        <div id="status-msg" class="status"></div>
+    </div>
+
+    <script>
+        function cadastrarRosto() {
+            let nome = prompt("Posicione-se em frente à câmera e digite seu Nome e Sobrenome:");
+            if (nome) {
+                document.getElementById("status-msg").innerText = "Cadastrando...";
+                document.getElementById("status-msg").style.color = "blue";
+                
+                let formData = new FormData();
+                formData.append("nome", nome);
+
+                fetch("/cadastrar", { method: "POST", body: formData })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("status-msg").innerText = data.mensagem;
+                    document.getElementById("status-msg").style.color = (data.status === "sucesso") ? "green" : "red";
+                })
+                .catch(error => {
+                    document.getElementById("status-msg").innerText = "Erro ao tentar conectar com o sistema.";
+                    document.getElementById("status-msg").style.color = "red";
+                });
+            }
+        }
+    </script>
+</body>
+</html>

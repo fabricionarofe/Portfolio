@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Arte da Cutilagem Perfeita</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+        :root {
+            --bg-color: #FCF9F9; /* Fundo principal: Rose bem clarinho */
+            --bg-alt: #F7EFED; /* Fundo alternativo: Rose um pouco mais marcado */
+            --text-dark: #3A2E2B;
+            --text-light: #7A6863;
+            --accent: #D49A89; /* Rose Gold / Nude elegante */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Cabeçalho Global FA Academy */
+        .global-header {
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FAFAFA;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+        .global-header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            color: #1A1A1A;
+        }
+        .global-header nav a {
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: #1A1A1A;
+            margin-left: 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        .global-header nav a:hover {
+            color: #999;
+        }
+        @media (max-width: 768px) {
+            .global-header nav { display: none; }
+        }
+
+        /* Tipografia de Alto Padrão */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        /* Estrutura de Seções */
+        .section {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 150px;
+        }
+
+        /* Layout Alternado (Texto de um lado, imagem do outro) */
+        .split-layout {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin: 80px 0;
+        }
+
+        .split-layout.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-block {
+            flex: 1;
+        }
+
+        .image-placeholder {
+            flex: 1;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Animações Contínuas (Flutuação) */
+        .floating-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(212, 154, 137, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Animação Orgânica do Topo (Morphing Blob) */
+        .hero-visual {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .blob-mask {
+            width: 260px;
+            height: 260px;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            overflow: hidden;
+            animation: morph 8s ease-in-out infinite;
+            box-shadow: 0 15px 35px rgba(212, 154, 137, 0.3);
+            border: 4px solid #FFF;
+        }
+
+        .blob-mask img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Dá um efeito de zoom lento e contínuo por dentro da forma */
+            animation: zoomInOut 10s ease-in-out infinite alternate;
+        }
+
+        /* Animações de Scroll (A Mágica) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efeito visual nas imagens (Surgindo de lado) */
+        .reveal-left { transform: translateX(-50px); }
+        .reveal-right { transform: translateX(50px); }
+        .reveal-left.active, .reveal-right.active { transform: translateX(0); }
+
+        /* Keyframes das novas animações orgânicas */
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translateY(0px); }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: translateY(-10px); }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: translateY(10px); }
+        }
+        @keyframes zoomInOut {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+
+        /* Destaques e Citações */
+        .quote-box {
+            padding: 40px;
+            border-left: 2px solid var(--accent);
+            background: #FFFFFF;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        /* Botão de Compra Elegante */
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background-color: var(--text-dark);
+            color: #FFF;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background 0.4s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent);
+        }
+
+        /* Design Responsivo */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            .split-layout, .split-layout.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image-placeholder { width: 100%; height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Global -->
+    <header class="global-header">
+        <a href="fa_academy.html" class="logo">FA Academy</a>
+        <nav>
+            <a href="fa_academy.html">Início</a>
+            <a href="fa_academy.html#cursos">Cursos</a>
+            <a href="/login">Área de Membros</a>
+        </nav>
+    </header>
+
+    <!-- Seção Hero (Topo da Página) -->
+    <section class="section hero reveal">
+        
+        <!-- Nova Animação Orgânica Flutuante -->
+        <div class="hero-visual">
+            <div class="blob-mask">
+                <!-- Imagem de Manicure Real e Elegante -->
+                <img src="FOTOS/Female_hands_with_red_nails_202606102139.jpeg" alt="Cutilagem Premium">
+            </div>
+        </div>
+
+        <h4 style="letter-spacing: 3px; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 0.85rem;">Masterclass Premium</h4>
+        <h1>Domine a Arte da<br>Cutilagem Perfeita.</h1>
+        <p style="max-width: 600px; margin: 0 auto;">Transforme a sua paixão em uma profissão altamente lucrativa. Eleve o padrão do seu serviço, conquiste a agenda lotada e fidelize suas clientes com um método delicado e seguro.</p>
+        <a href="#conteudo" class="cta-btn">Conheça o Método</a>
+    </section>
+
+    <!-- Bloco 1: O Problema e a Promessa -->
+    <section id="conteudo" class="section">
+        <div class="split-layout">
+            <div class="content-block reveal reveal-left">
+                <h2>Mais do que fazer unhas. Entregar autoestima.</h2>
+                <p>Muitas profissionais perdem clientes porque sentem insegurança na hora de pegar no alicate. O medo de "tirar bife", a esmaltação manchada e o acabamento imperfeito são as maiores barreiras para uma agenda lotada.</p>
+                <p>A verdade é que a cutilagem é o cartão de visita da manicure. E o segredo não está na força, mas no <strong>ângulo exato da ferramenta</strong>.</p>
+            </div>
+            <div class="image-placeholder reveal reveal-right">
+                <img src="FOTOS/Macro_photography_of_bare_nail_202606102138.jpeg" alt="Ferramentas de Manicure" class="floating-img" style="animation-delay: 0s;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloco 2: Lucratividade e Independência -->
+    <section class="section" style="background-color: var(--bg-alt);">
+        <div class="split-layout reverse">
+            <div class="content-block reveal reveal-right">
+                <h2>Transforme Beleza em Lucro Real.</h2>
+                <p>A profissão de manicure é uma das raras oportunidades onde você pode começar com baixíssimo investimento e ter retorno financeiro na mesma semana. Neste treinamento, você aprenderá não só a entregar unhas impecáveis, mas o método exato para <strong>lotar sua agenda</strong> e cobrar o valor que o seu trabalho realmente merece.</p>
+                <div class="quote-box">
+                    "Uma manicure comum ganha por unha. Uma especialista ganha pela experiência de alto padrão, cobra mais caro e tem clientes fidelizadas implorando por um horário na agenda."
+                </div>
+            </div>
+            <div class="image-placeholder reveal reveal-left">
+                <img src="FOTOS/Manicure_station_with_tools_and_202606102138.jpeg" alt="Spa e Relaxamento das Mãos" class="floating-img" style="animation-delay: 1.5s;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloco 3: O Alicate a 45 Graus -->
+    <section class="section">
+        <div class="split-layout">
+            <div class="content-block reveal reveal-left">
+                <h2>O Segredo do Corte Contínuo</h2>
+                <p>Nesta masterclass, você passará pelo <strong>Desafio da Laranja</strong>. Antes de ir para as mãos de uma cliente, você vai treinar a leveza da sua mão, entendendo como inclinar o alicate a 45 graus para remover a cutícula como se fosse uma fita inteira.</p>
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li style="margin-bottom: 10px; color: var(--text-light);">✓ Sem picotes na pele.</li>
+                    <li style="margin-bottom: 10px; color: var(--text-light);">✓ Sem pelinhas levantando no dia seguinte.</li>
+                    <li style="margin-bottom: 10px; color: var(--text-light);">✓ Esmaltação com contorno impecável.</li>
+                </ul>
+            </div>
+            <div class="image-placeholder reveal reveal-right">
+                <img src="FOTOS/Manicure_tools_in_sterilization_…_202606102138.jpeg" alt="Unhas Perfeitas" class="floating-img" style="animation-delay: 0.5s;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Grade de Módulos (Visão Geral do Curso) -->
+    <section class="section reveal">
+        <h2 style="text-align: center; margin-bottom: 10px;">Conteúdo Programático Completo</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 60px auto;">Uma jornada de 10 módulos desenhada para levar você do absoluto zero à maestria na profissão de manicure.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            
+            <!-- Módulo 1 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 1</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">A Profissional de Sucesso – Postura e Ética</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">Boas-vindas ao curso: O poder da primeira impressão.</li>
+                    <li style="margin-bottom: 8px;">A mentalidade empreendedora: Você é dona do seu próprio negócio.</li>
+                    <li style="margin-bottom: 8px;">Vestimenta e apresentação pessoal: Seu visual é o seu cartão de visitas.</li>
+                    <li style="margin-bottom: 8px;">Gestão de tempo: Organização de agenda e a Regra dos 15 Minutos.</li>
+                    <li style="margin-bottom: 8px;">Como lidar com imprevistos e atrasos (os seus e os das clientes).</li>
+                    <li style="margin-bottom: 8px;">Ética profissional: O poder da discrição e o sigilo no atendimento.</li>
+                    <li style="margin-bottom: 8px;">Comunicação assertiva: O que conversar e quando praticar o silêncio.</li>
+                    <li style="margin-bottom: 8px;">Gerenciamento de crise: Como lidar com clientes difíceis ou insatisfeitas.</li>
+                    <li style="margin-bottom: 8px;">A arte da fidelização: Detalhes que fazem a cliente voltar sempre.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Jogo das Situações (Múltipla-escolha) e Gravação Prática do "Script de Boas-Vindas".</li>
+                </ul>
+            </div>
+            
+            <!-- Módulo 2 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 2</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Biossegurança – A Proteção de Todos</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">O que é biossegurança e como ela aumenta o valor do seu serviço.</li>
+                    <li style="margin-bottom: 8px;">Identificando os riscos: Doenças comuns transmissíveis no salão.</li>
+                    <li style="margin-bottom: 8px;">A diferença fundamental entre limpar, desinfetar e esterilizar.</li>
+                    <li style="margin-bottom: 8px;">O passo a passo da limpeza e embalagem dos instrumentos.</li>
+                    <li style="margin-bottom: 8px;">Autoclave e estufa: Entendendo os equipamentos de esterilização.</li>
+                    <li style="margin-bottom: 8px;">A regra do descartável: O que abrir na frente da cliente e o que jogar fora.</li>
+                    <li style="margin-bottom: 8px;">Descarte consciente: Como separar o lixo biológico e perfurocortante.</li>
+                    <li style="margin-bottom: 8px;">EPIs (Equipamentos de Proteção Individual) indispensáveis para a manicure.</li>
+                    <li style="margin-bottom: 8px;">Rotina express: Higienização e organização da bancada entre clientes.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Dinâmica "Certo ou Errado da Lixeira" e Prática de Montagem da "Mesa Padrão Ouro".</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 3</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Conhecendo a Tela – Anatomia e Saúde das Unhas</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">O mapa da unha: Matriz, leito ungueal, lúnula e borda livre.</li>
+                    <li style="margin-bottom: 8px;">Visagismo das mãos: Identificando biotipos e proporções dos dedos.</li>
+                    <li style="margin-bottom: 8px;">O guia dos formatos: Quadrada, redonda, oval e stiletto.</li>
+                    <li style="margin-bottom: 8px;">Qual formato escolher? Harmonizando o corte com o tipo de mão.</li>
+                    <li style="margin-bottom: 8px;">Diagnóstico visual: Identificando unhas fracas, estriadas ou manchadas.</li>
+                    <li style="margin-bottom: 8px;">A beleza vem de dentro: A influência das vitaminas, cálcio e alimentação.</li>
+                    <li style="margin-bottom: 8px;">Alerta vermelho: Como identificar fungos/micoses e quando recusar o atendimento.</li>
+                    <li style="margin-bottom: 8px;">Unhas encravadas (onicocriptose): Os limites da manicure frente à podologia.</li>
+                    <li style="margin-bottom: 8px;">Os perigos do lixamento: Por que não usar lixa polidora grossa em unhas finas.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Quebra-Cabeça da Anatomia e Prática de "Análise de Perfil" na família.</li>
+                </ul>
+            </div>
+            
+            <!-- Módulo 4 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 4</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Ferramentas de Trabalho e Preparação</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">O arsenal da manicure: Conhecendo os diferentes tipos de alicates.</li>
+                    <li style="margin-bottom: 8px;">Espátulas, palitos e lixas: Como escolher a gramatura e o material ideal.</li>
+                    <li style="margin-bottom: 8px;">Manutenção das ferramentas: Como conservar e quando mandar afiar.</li>
+                    <li style="margin-bottom: 8px;">A evolução do atendimento: Por que abandonar a bacia de água de vez.</li>
+                    <li style="margin-bottom: 8px;">Emolientes e cremes: Como os ativos químicos ajudam no amolecimento.</li>
+                    <li style="margin-bottom: 8px;">Tecnologia a favor: O uso correto de botas e luvas descartáveis.</li>
+                    <li style="margin-bottom: 8px;">Preparação do ambiente: Iluminação, ventilação e conforto.</li>
+                    <li style="margin-bottom: 8px;">Ergonomia: A postura correta para não prejudicar suas costas e pescoço.</li>
+                    <li style="margin-bottom: 8px;">O Checklist de Início: Os 5 passos antes da cliente sentar na cadeira.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Caça-Erros da Bancada e Prática de Treino de Destreza Manual com Alicate (no ar).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 5 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 5</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Spa das Mãos – Cutilagem Perfeita</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">Remoção de esmalte antigo sem agredir ou ressecar a unha.</li>
+                    <li style="margin-bottom: 8px;">Técnica de lixamento: Como garantir simetria em todas as unhas.</li>
+                    <li style="margin-bottom: 8px;">O amolecimento estratégico: Aplicação do creme e tempo de pausa.</li>
+                    <li style="margin-bottom: 8px;">O movimento da espátula: Como desgrudar a cutícula sem arranhar a matriz.</li>
+                    <li style="margin-bottom: 8px;">A física do alicate: Entendendo a pressão e a inclinação de 45 graus.</li>
+                    <li style="margin-bottom: 8px;">A técnica do corte contínuo: Como retirar a cutícula como uma fita única.</li>
+                    <li style="margin-bottom: 8px;">Prevenção de acidentes: Como evitar "bifes" e como estancar pequenos sangramentos.</li>
+                    <li style="margin-bottom: 8px;">O acabamento interno e a remoção das peles soltas (repicadas).</li>
+                    <li style="margin-bottom: 8px;">O toque final: Hidratação express e massagem revigorante nas mãos.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Dinâmica "Ordene o Processo" e Prática "O Desafio da Laranja" (Controle de corte).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 6 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 6</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Spa dos Pés – Estética e Relaxamento</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">Anatomia dos pés: Entendendo as diferenças de espessura da pele e calosidades.</li>
+                    <li style="margin-bottom: 8px;">O corte milimétrico: Como aparar as unhas dos pés sem risco de encravar.</li>
+                    <li style="margin-bottom: 8px;">Lixamento lateral: Suavizando as pontas com segurança.</li>
+                    <li style="margin-bottom: 8px;">Amolecimento e cutilagem focada nos cantos difíceis dos dedos dos pés.</li>
+                    <li style="margin-bottom: 8px;">Calosidades e asperezas: O lixamento plantar inteligente e sem exagero.</li>
+                    <li style="margin-bottom: 8px;">Esfoliação profunda: O segredo para renovar a pele e remover células mortas.</li>
+                    <li style="margin-bottom: 8px;">Avaliação crítica: Quando o cliente precisa de hidratação ou de um dermatologista.</li>
+                    <li style="margin-bottom: 8px;">Hidratação selante: Massagem com cremes e óleos de rápida absorção.</li>
+                    <li style="margin-bottom: 8px;">Um mimo inesquecível: Os 5 passos de reflexologia básica para relaxamento.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Mapa do Relaxamento interativo e Prática de uma Sessão Completa (Spa dos Pés).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 7 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 7</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Esmaltação Impecável e Limpeza</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">O primer invisível: A importância da base para o nivelamento e durabilidade.</li>
+                    <li style="margin-bottom: 8px;">Química do esmalte: Como misturar (rolar vs. sacudir) e evitar bolhas de ar.</li>
+                    <li style="margin-bottom: 8px;">A esmaltação perfeita: Quantidade exata no pincel e a direção das pinceladas.</li>
+                    <li style="margin-bottom: 8px;">O segredo da palitação: Limpando o contorno a cada camada para evitar manchas.</li>
+                    <li style="margin-bottom: 8px;">Tons claros e nudes: Como esmaltar com branco sem deixar a unha manchada.</li>
+                    <li style="margin-bottom: 8px;">Vermelhos e escuros: Técnicas para não manchar o dedo da cliente.</li>
+                    <li style="margin-bottom: 8px;">Limpeza final: O manuseio do palito com algodão e removedor.</li>
+                    <li style="margin-bottom: 8px;">O toque finalizador: Spray secante, óleo ou Top Coat extrabrilho?</li>
+                    <li style="margin-bottom: 8px;">Dicas de durabilidade: Como orientar a cliente a cuidar do esmalte em casa.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Quiz das Bolinhas e Prática de Esmaltação Escura (Treino de contorno limpo).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 8 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 8</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Nail Art Essencial – Os Clássicos que Vendem</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">Introdução à Nail Art: Preparando o seu kit de pincéis e tintas.</li>
+                    <li style="margin-bottom: 8px;">Psicologia das Cores: Combinações que atraem e encantam as clientes.</li>
+                    <li style="margin-bottom: 8px;">A Francesinha Clássica: Entendendo as proporções do traço branco.</li>
+                    <li style="margin-bottom: 8px;">O "Truque do Dedão": A técnica infalível para carimbar pontas retas.</li>
+                    <li style="margin-bottom: 8px;">A Inglesinha: Brincando com cores vibrantes e contrastes modernos.</li>
+                    <li style="margin-bottom: 8px;">Retrô Chic: O passo a passo da clássica Meia-Lua (francesinha invertida).</li>
+                    <li style="margin-bottom: 8px;">Filha-única: Como criar pontos de destaque harmônicos em uma mão esmaltada.</li>
+                    <li style="margin-bottom: 8px;">Arte com fitas: O uso de fitilhos metálicos e delineamentos retos.</li>
+                    <li style="margin-bottom: 8px;">Selagem artística: Como passar o extrabrilho sem borrar o seu desenho.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Simulador de Traços e Prática "O Treino do Vidro" (Traços em superfície plástica).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 9 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 9</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">Nail Art Avançada e Tips (Postiças)</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">O mercado do alongamento expresso: Entendendo o potencial de lucro das Tips.</li>
+                    <li style="margin-bottom: 8px;">Joias de unhas: Como escolher, posicionar e colar strass e pedrarias.</li>
+                    <li style="margin-bottom: 8px;">Adesivos e películas: A aplicação sem rugas e a finalização impecável.</li>
+                    <li style="margin-bottom: 8px;">Preparação do leito ungueal: Retirando a oleosidade natural para fixação da cola.</li>
+                    <li style="margin-bottom: 8px;">Encontrando o tamanho ideal: Como medir a Tip correta para cada dedo.</li>
+                    <li style="margin-bottom: 8px;">A colagem perfeita: Evitando bolhas de ar entre a unha natural e a postiça.</li>
+                    <li style="margin-bottom: 8px;">O nivelamento do degrau: Lixamento técnico para um visual 100% natural.</li>
+                    <li style="margin-bottom: 8px;">Cortando e moldando a postiça: Ajustando ao formato desejado pela cliente.</li>
+                    <li style="margin-bottom: 8px;">Esmaltação e manutenção de unhas postiças: Cuidados para durar até 15 dias.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Organização da "Ordem de Colagem" e Prática de Decoração Livre (Em palito de suporte).</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 10 -->
+            <div style="background: #FFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(212, 154, 137, 0.05); text-align: left; transition: transform 0.3s; border-top: 3px solid var(--accent); cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="color: var(--accent); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">Módulo 10</div>
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">O Seu Negócio Brilhando – Gestão e Captação</h3>
+                <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li style="margin-bottom: 8px;">A transição de mentalidade: De manicure a dona de um negócio lucrativo.</li>
+                    <li style="margin-bottom: 8px;">Custos e Despesas: Calculando o preço do seu material, estrutura e hora de trabalho.</li>
+                    <li style="margin-bottom: 8px;">Precificação justa: Como calcular o seu lucro sem medo da concorrência.</li>
+                    <li style="margin-bottom: 8px;">Como montar a sua tabela de serviços e como comunicar reajustes às clientes.</li>
+                    <li style="margin-bottom: 8px;">A vitrine digital: A importância de um portfólio visual impecável.</li>
+                    <li style="margin-bottom: 8px;">A foto que vende: Dominando luz, ângulos, fundos e a pose da mão da cliente.</li>
+                    <li style="margin-bottom: 8px;">Estruturando o seu Instagram profissional (Bio, Destaques, Feed e Stories).</li>
+                    <li style="margin-bottom: 8px;">Captação ativa: Estratégias simples (e sem custo) para lotar a sua agenda inicial.</li>
+                    <li style="margin-bottom: 8px;">O Pós-venda: Como mandar mensagem para a cliente e garantir o próximo agendamento.</li>
+                    <li style="margin-bottom: 0;">Exercício e Fixação: Estudo de Caso "Calculadora de Lucro" e Prática Final (Montagem de Tabela de Preços e Primeira Postagem).</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Oferta e Preço (Fundo do Funil) -->
+    <section class="section reveal" style="text-align: center; background-color: var(--bg-alt); margin-top: 80px; padding: 120px 5%;">
+        <h2>Pronta para se destacar no mercado?</h2>
+        <p style="max-width: 500px; margin: 0 auto 40px auto;">Acesso imediato e vitalício a todo o conteúdo, emissão de certificado de 60 horas, atividades práticas interativas e o roteiro exato para precificar seu trabalho e lotar sua agenda pelo Instagram. Promoção por tempo limitado!</p>
+        
+        <div style="margin-bottom: 30px;">
+            <span style="text-decoration: line-through; color: #A3A09E; font-size: 1.2rem; margin-right: 15px;">De R$ 109,00</span>
+            <span style="font-size: 3rem; color: var(--text-dark); font-weight: 600; font-family: 'Cormorant Garamond', serif;">Por R$ 29,90</span>
+        </div>
+
+        <!-- Aqui entra o link da plataforma de pagamento que o seu Robô no VS Code vai enviar -->
+        <a href="#" class="cta-btn" style="background-color: var(--accent);">Garantir Minha Vaga Agora</a>
+        <p style="font-size: 0.85rem; margin-top: 20px;">Pagamento 100% seguro. Garantia incondicional de 7 dias.</p>
+        </section>
+
+    <script>
+        // Máquina de Animações de Scroll
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 120; // Ponto de gatilho para a animação
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        
+        window.addEventListener("scroll", revealOnScroll);
+        
+        // Dispara a função ao carregar a página para animar a seção Hero imediatamente
+        revealOnScroll();
+
+        // --- Lógica para rotacionar imagens da pasta FOTOS ---
+        // Como o navegador não pode ler pastas automaticamente por segurança,
+        // você precisa listar os nomes exatos dos seus arquivos de foto aqui:
+        const imagensFotos = [
+            'FOTOS/Female_hands_with_red_nails_202606102139.jpeg',
+            'FOTOS/Macro_photography_of_bare_nail_202606102138.jpeg',
+            'FOTOS/Manicure_station_with_tools_and_202606102138.jpeg',
+            'FOTOS/Manicure_tools_in_sterilization_…_202606102138.jpeg',
+            'FOTOS/Manicure_tools_on_white_towel_202606102138.jpeg',
+            'FOTOS/Manicurist_applying_polish_to_nail_202606102138.jpeg',
+            'FOTOS/Nail_polish_applied_to_fingernail_202606102138.jpeg',
+            'FOTOS/Woman\'s_foot_receiving_massage_202606102138.jpeg',
+            'FOTOS/Woman_holding_tablet_in_salon_202606102139.jpeg'
+        ];
+
+        const imagensParaRotacionar = document.querySelectorAll('.blob-mask img, .image-placeholder img');
+        let indiceImagemAtual = 0;
+
+        if (imagensFotos.length > 0) {
+            // Prepara as imagens com uma transição suave (Fade in/Fade out)
+            imagensParaRotacionar.forEach(img => {
+                img.style.transition = 'opacity 0.5s ease-in-out';
+            });
+
+            setInterval(() => {
+                imagensParaRotacionar.forEach((img, index) => {
+                    img.style.opacity = 0; // Fade out
+                    setTimeout(() => {
+                        const fotoIndex = (indiceImagemAtual + index) % imagensFotos.length;
+                        img.src = imagensFotos[fotoIndex];
+                        img.style.opacity = 1; // Fade in
+                    }, 500); // Aguarda o fade out antes de trocar a imagem
+                });
+                indiceImagemAtual = (indiceImagemAtual + 1) % imagensFotos.length;
+            }, 5000); // Troca as imagens a cada 5 segundos (5000 ms)
+        }
+    </script>
+</body>
+</html>

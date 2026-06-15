@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
+			<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" /><link type="text/css" rel="stylesheet" href="/gdocprocessos/javax.faces.resource/theme.css.jsf?ln=primefaces-bootstrap&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/gdocprocessos/javax.faces.resource/primeicons/primeicons.css.jsf?ln=primefaces&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/gdocprocessos/javax.faces.resource/components.css.jsf?ln=primefaces&amp;v=11.0.0" /><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/jquery/jquery.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/jquery/jquery-plugins.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/core.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/components.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/touch/touchswipe.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/keyfilter/keyfilter.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/inputmask/inputmask.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/gdocprocessos/javax.faces.resource/filedownload/filedownload.js.jsf?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='pt_BR';PrimeFaces.settings.viewId='/pages/processo/pesquisa_lista.xhtml';PrimeFaces.settings.contextPath='/gdocprocessos';PrimeFaces.settings.cookiesSecure=false;}</script>
+
+		<title>Gestão de Documentos</title>
+
+
+		<link href="/gdocprocessos/css/gdocprocessos.css" rel="stylesheet" type="text/css" />
+		<link href="/gdocprocessos/css/mobile.css" rel="stylesheet" type="text/css" />
+		<script src="/gdocprocessos/js/locale-primefaces.js" type="application/javascript"></script>
+		
+		<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-ZXDV8HKH92"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-ZXDV8HKH92');
+		</script></head><body>
+
+		<div id="topo" class="topo">
+			<img src="/gdocprocessos/img/gdoc-Cinbesa-PROCESSOS2.png" class="logo-mobile" alt="GDocProcessos" />
+
+
+			<div id="usuarioLogado">Usuário: FABRICIO NAZARENO RODRIGUES FERREIRA
+				<br />
+				<div style="display: flex; align-items:center; margin:2px 0">Lotação: DIMAV / SEGEP
+<form id="j_idt13" name="j_idt13" method="post" action="/gdocprocessos/processos/pesquisa" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt13" value="j_idt13" />
+<input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form>
+				</div><span id="perfilUsuario">Perfil: CHEFE DE SETOR </span>
+
+			</div>
+		</div>
+
+		<div id="menu"><html xmlns="http://www.w3.org/1999/xhtml">
+<form id="formMenu" name="formMenu" method="post" action="/gdocprocessos/processos/pesquisa" accept-charset="ISO-8859-1" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formMenu" value="formMenu" />
+<div id="formMenu:menuPrincipal" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul role="menubar" class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all submenu-inicio-mobile submenu-mobile" href="/gdocprocessos/home/" onclick="PF('statusDialog').show()"><span class="ui-menuitem-icon ui-icon ui-icon-home" aria-hidden="true"></span><span class="ui-menuitem-text">Início   </span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent subMenu submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-info" aria-hidden="true"></span><span class="ui-menuitem-text">Circular</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/circular/novacircular" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Nova Circular</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/circular/criadas" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Circulares Criadas</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/circular/minhascirculares" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Circulares Recebidas</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/circular/setorrecebeexterno" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Setores Recebem Circular Externa</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent subMenu subMenuProcesso submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon pi pi-book" aria-hidden="true"></span><span class="ui-menuitem-text">Processo</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processo/pesquisarInteressado" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Novo Processo</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/meusprocessos" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Meus Processos</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/nestaentidade" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Neste Órgão</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/listaHierarquia" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Em Acompanhamento</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/pesquisa" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Pesquisar Processo</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processo/pesquisa/documentos" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Pesquisar Documentos Anexos</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/encerrados" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Encerrados Neste Setor</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/arquivados" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Arquivados Neste Setor</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processo/reaberto" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Reabertos</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processos/tramite/estornar" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Estorno de Encaminhamento</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processo/juntados" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Juntados</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/processo/diligencia" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos em Diligência</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent subMenu submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-person" aria-hidden="true"></span><span class="ui-menuitem-text">Interessado</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/interessado/novo" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Cadastrar Interessado</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/interessado/lista" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Lista de Interessados</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent subMenu subMenuRelatorio submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-print" aria-hidden="true"></span><span class="ui-menuitem-text">Relatório</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/processosNesteSetor" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Neste Setor</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/processoenviado" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Enviados</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/processopendenterecebimento" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Pendentes de Recebimento</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/processosoriginados" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Processos Originados</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/processosoriginados/tramites" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Trâmites de Processos Originados</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/relatorios/totalprocessosnosetor" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Total de Processos no Setor</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-person" aria-hidden="true"></span><span class="ui-menuitem-text">Usuário</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/seguranca/usuario/configuracoes/" onclick="PF('statusDialog').show()"><span class="ui-menuitem-text">Minhas informações</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/gdocprocessos/usuario/senha/alterar" onclick="PF('statusDialog').show()"><span class="ui-menuitem-icon ui-icon ui-icon-key" aria-hidden="true"></span><span class="ui-menuitem-text">Alterar Senha</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent submenu-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-help" aria-hidden="true"></span><span class="ui-menuitem-text">Ajuda</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="#" onclick="PF('ultimasAtualizacoesDialog').show();PrimeFaces.ab({s:&quot;formMenu:j_idt114&quot;,f:&quot;formMenu&quot;,p:&quot;formMenu:j_idt114&quot;});return false;"><span class="ui-menuitem-text">Últimas Atualizações</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="https://sistemas.belem.pa.gov.br/gdocprocessos/documentacao/" target="_blank"><span class="ui-menuitem-icon ui-icon ui-icon-comment" aria-hidden="true"></span><span class="ui-menuitem-text">Manual</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent submenu-mobile submenu-ml-mobile" role="none"><a role="menuitem" aria-haspopup="true" href="#" tabindex="-1" class="ui-menuitem-link ui-submenu-link ui-corner-all"><span class="ui-menuitem-icon ui-icon ui-icon-video" aria-hidden="true"></span><span class="ui-menuitem-text">Curso GDOC</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="https://sistemas.belem.pa.gov.br/gdocprocessos/documentacao/curso/usuario.html" target="_blank"><span class="ui-menuitem-icon ui-icon ui-icon-folder-collapsed" aria-hidden="true"></span><span class="ui-menuitem-text">Usuário</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="https://sistemas.belem.pa.gov.br/gdocprocessos/documentacao/curso/gestor.html" target="_blank"><span class="ui-menuitem-icon ui-icon ui-icon-folder-collapsed" aria-hidden="true"></span><span class="ui-menuitem-text">Gestor</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="https://sistemas.belem.pa.gov.br/gdocprocessos/documentacao/curso/administrador.html" target="_blank"><span class="ui-menuitem-icon ui-icon ui-icon-folder-collapsed" aria-hidden="true"></span><span class="ui-menuitem-text">Administrador</span></a></li></ul></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all submenu-mobile" style="margin-left:15px" href="#" onclick="PF('statusDialog').show();PrimeFaces.addSubmitParam('formMenu',{'formMenu:j_idt120':'formMenu:j_idt120'}).submit('formMenu');return false;"><span class="ui-menuitem-icon ui-icon pi pi-sign-out" aria-hidden="true"></span><span class="ui-menuitem-text">Sair   </span></a></li></ul></div><script id="formMenu:menuPrincipal_s" type="text/javascript">$(function(){PrimeFaces.cw("Menubar","widget_formMenu_menuPrincipal",{id:"formMenu:menuPrincipal",autoDisplay:false,delay:0});});</script><div id="formMenu:j_idt121" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container dialog-mobile"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formMenu:j_idt121_title" class="ui-dialog-title">Últimas Atualizações</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Fechar"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="formMenu:j_idt121_content">
+  <div style="height: 80vh;overflow-y: scroll;overflow-x: hidden; width: 85vw;">
+  		
+  		<h3>Outubro de 2025</h3>
+  		<ul>
+            <li>Administração &gt; Segurança &gt; Recebimento de órgãos externos: Permissão/Configuração de recebimento de processos por setor de órgãos externos e seus respectivos setores</li>
+  		</ul>
+		<h3>Março de 2025</h3>
+  		<ul>
+            <li>Correção e ajuste no relatório "Produtividade por Órgão Setor"</li>
+  		</ul>
+		<h3>Fevereiro de 2025</h3>
+  		<ul>
+            <li>Alteração de Nomenclatura de Órgãos por período</li>
+            <li>Migração de processos em lote por setor</li>
+            <li>Ativação temporária de usuários inativos</li>
+            <li>Adição de coluna "Setor" atual no relatório "Processos Neste Setor"</li>
+            <li>Correções de bugs</li>
+  		</ul>
+		<h3>Novembro de 2024</h3>
+  		<ul>
+            <li>Correção do registro de reabertura de processos</li>
+            <li>Registro de encerramentos e reaberturas em detalhe de processo</li>
+            <li>Melhoria na exibição de status de um processo na tela de detalhe</li>
+  		</ul>
+  		
+		<h3>Agosto de 2024</h3>
+  		<ul>
+            <li>Edição de Setor de Origem da Solicitação de Processo em tela de Resumo</li>
+            <li>Ajustes de interações em tela de Usuários</li>
+            <li>Melhoria em gerencia de perfis, podendo-se excluir caso não haja usuário lotado</li>
+            <li>Re-organização do menu superior</li>
+            <li>Envio de e-mail pelo sistema em casos de: Processo criado, recebido, encaminhado, encaminhado ao setor lotado, com encaminhamento interno, encerrado e também em registro de interessado e redefinição de senhas</li>
+            <li>Gerenciamento de permissões de envio de e-mail pelo sistema em Usuários &gt; Minhas Informações</li>
+  		</ul>
+  
+  		<h3>Maio de 2024</h3>
+  		<ul>
+            <li>
+	  		<strong style="margin-bottom:5px">Melhoria em detalhamento do Processo</strong>
+           	<br />
+	  		<ul>
+	  			<li><strong style="margin-bottom:5px">Melhoria nos botões de ações</strong></li>
+	  			<li><strong style="margin-bottom:5px; margin-right:3px">Adicionado informações do processo:</strong>Data, Setor e Usuário de Criação</li>
+	  			<li><strong style="margin-bottom:5px; margin-right:3px">Melhoria da aba de Encaminhamentos:</strong>Tramitações podem ser acompanhadas via esquema de Fluxograma</li>
+	  		</ul>
+  			</li>
+  		</ul>
+  		
+  		<ul>
+            <li>
+	  		<strong style="margin-bottom:5px">Melhoria em tela Pesquisar Processo:</strong>
+           	<br />
+        	<ul>
+	  			<li><strong style="margin-bottom:5px">Organização dos campos de filtro avançado</strong></li>
+	  			<li><strong style="margin-bottom:5px">Adicionados novos campos de busca em campos do Interessado</strong></li>
+	  			<li><strong style="margin-bottom:5px;margin-right:3px">Adicionado ações aos processos que estão no mesmo setor de Lotação do usuário:</strong>Detalhar, Resumo, Encaminhar ou Receber</li>
+	  			<li><strong style="margin-bottom:5px">Opções voltar após Resumo ou Encaminhamento mantém o estado da última pesquisa</strong></li>
+  			</ul>
+  			</li>
+  		</ul>
+  		
+  		
+  		<ul>
+            <li>
+	  		<strong style="margin-bottom:5px">Melhoria em Resumo de Processo:</strong>
+           	<br />
+        	<ul>
+	  			<li><strong style="margin-bottom:5px">Organização dos botões de ações</strong></li>
+	  			<li><strong style="margin-bottom:5px">Informações do despacho podem ser ocultadas</strong></li>
+	  			<li><strong style="margin-bottom:5px; margin-right:3px">Adicionado informações do processo:</strong>Data, Setor e Usuário de Criação</li>
+  			</ul>
+  			</li>
+  		</ul>
+  		
+  		<ul>
+            <li>
+  			<strong style="margin-bottom:5px">Adicionado resumo de encaminhamento após uma tramitação efetivada, com possibilidade de Estorno do Encaminhamento</strong>
+  			</li>
+		</ul>
+  			
+        <h3>Abril de 2024</h3>
+        <ul>
+            <li><strong>Tela de encaminhamento</strong>
+            	<br />
+            	<br />
+            	<ul>
+	            	<li><strong style="margin-bottom:5px">Localizar setor por órgão:</strong><p>Você seleciona o órgão e setor para onde deseja encaminhar o processo.
+						Podendo realizar o encaminhamento interno para um dos usuários do setor selecionado (vide permissão).</p></li>
+					<li><strong style="margin-bottom:5px">Localizar setor por usuário:</strong><p> Você digita o nome do usuário e será exibido uma lista mostrando o usuário e suas lotações. (Caso o usuário esteja lotado em mais de uma lotação, serão exibidas todas as lotações ativas).
+						Após selecionar o setor desejado, o processo será encaminhado para o setor já com encaminhamento interno para este usuário selecionado.
+						Caso prefira, você pode optar por encaminhar apenas para o setor (não realizando o encaminhamento interno), ou então encaminhar para outro usuário do mesmo setor em uma outra listagem abaixo.</p>
+					</li>
+		            <li><strong style="margin-bottom:5px">Encaminhar por fluxo:</strong><p>Caso um tipo de processo tenha um fluxo predefinido, a opção de encaminhar por fluxo irá aparecer, e o processo seguirá o fluxo já definido.</p></li>
+					<li><strong style="margin-bottom:5px">Melhoria na anexação e visualização da lista de anexos:</strong><p>Agora na tela de encaminhamento é possível visualizar a lista de anexos do processo, e também anexar novos documentos.</p></li>
+            	</ul>
+            </li>
+            <br />
+            <li><strong>Encaminhamento Interno</strong>
+            	<br /><br />
+            	<ul>
+            		<li>Melhoria em Redistribuir ou remover encaminhamento interno.</li>
+            		<li>Histórico de redistribuições a cada trâmite.</li>
+            		<li>Adicionado novos motivos de redistribuição de encaminhamento interno: "Troca de responsável" e "Outros".</li>
+            	</ul>
+            </li>
+            <br />
+            <li><strong>Melhorias para anexos dos processos</strong>
+            <br /><br />
+            	<ul>
+            		<li>Ajuste na permissão de visualização de anexos.</li>
+            	</ul>
+            </li>
+            
+        </ul>
+        
+         <h3>Março de 2024</h3>
+        <ul>
+            <li><strong>Filtros de situação</strong>
+            	<p>"Meus processos" realiza filtros em processos com status "Aberto", "Encarrado" ou ambos.</p>
+            </li>
+            <br />
+            <li><strong>Menu "Processos Neste Setor" incluído em "Meus Processos"</strong>
+            		<p>Dentro de "Meus Processos" estão incluídos variaveis de pesquisas, onde será possível encontrar a maioria dos processos desejados.</p>
+         			<ul>
+         				<li><strong>Neste Setor:</strong> todos os processos que foram encaminhados para o seu setor de lotação.</li>
+         				<li><strong>Criados por Mim:</strong> todos os processos criados pelo seu usuário.</li>
+         				<li><strong>Que sou o Interessado:</strong> todos os processos que foram criados que o interessado possua seu CPF.</li>
+         				<li><strong>Que Interagi:</strong> todos os processos que o usuário teve interação de recebimento, encaminhamento ou anexação.</li>
+         				<li><strong>Em minha Responsabilidade:</strong> todos os processos que foram encaminhados internamente para o seu usuário.</li>
+         			</ul>
+            </li>
+            <br />
+             <li><strong>Processos Juntados</strong>
+            	<p>Agora os processos juntados aparecem com um ícone exibido junto ao número do processo, removendo a coluna e melhorando a visualização.</p>
+            </li>
+            <br />
+             <li><strong>Ajustes para melhorar a gestão administrativa</strong>
+            	<p>Configurar e criar perfil de qualquer órgão sem precisar se lotar em um setor (Super ADM).</p>
+            </li>
+        </ul>
+        
+        <h3>Fevereiro de 2023</h3>
+	        <ul>
+	        	<li>Filtro de Processos Neste Setor por Instrução inicial</li>
+	        	<li>Desativação de usuário automaticamente pelo GRH
+	        		<img id="formMenu:j_idt123" src="/gdocprocessos/img/warning.png?pfdrid_c=true" alt="" title="Quando um servidor perder o vínculo com seu órgao e tiver seu cadastro encerrado pelo GRH, então o cadastro no GDOC também será inativado." style="width: 12px; margin-left:5px" />
+	        	</li>
+	        	<li>Filtro de usuários por Lotação (Admin)</li>
+	        	<li>Cadastro de usuário com consulta do funcionário em dados do GRH</li>
+	        	<li>Mudança de senha provisória após login</li>
+	        	<li>Regra de senha forte</li>
+	        	<li>Chefes de setor podem excluir anexos sob log de justificava</li>
+	        	<li>Realizar encaminhamento interno no momento da tramitação de um processo (Chefe de setor)</li>
+	        	<li>Log da criação de interessados</li>
+	        </ul>
+		
+		<h3>Abril de 2022</h3>
+        <ul>
+            <li>Atualização da versão do servidor de aplicação</li>
+            <li>Atualização da versão das bibliotecas</li>
+            <li>Revisão dos formulários</li>
+            <li>Disponível para dispositivo móvel</li>
+        </ul>
+		<h3>Janeiro de 2022</h3>
+        <ul>
+            <li>Migração do módulo de impressão para API</li>
+        </ul>
+        
+        <h3>08/Fev/2019</h3>
+        <ul>
+            <li>Relatório "Processos neste setor" </li>
+            <li>Relatório "Total de Processos no setor" </li>
+            <li>Ajustes gerais</li>
+            <li>Correção de bugs</li>
+        </ul>
+        <h3>Dezembro de 2018</h3>
+        <ul>
+            <li>Mensagem de recomendação de anexo em pdf</li>
+            <li>Ajustes gerais</li>
+            <li>Correção de bugs</li>
+        </ul>
+        <h3>Agosto de 2018</h3>
+        <ul>
+            <li>Impressão de Requerimento</li>
+            <li>Anexar arquivos em Requerimento</li>
+            <li>Ajustes gerais</li>
+            <li>Correção de bugs</li>
+        </ul>
+        <h3>Julho de 2018</h3>
+        <ul>
+            <li>Requerimento via web</li>
+            <li>Ajustes gerais</li>
+            <li>Correção de bugs</li>
+        </ul>
+        <h3>Data da atualização 04/05/2018</h3>
+        <ul>
+            <li>Arquivar Requerimentos </li>
+            <li>Arquivar Demandas</li>
+            <li>Manual de Requerimento</li>
+            <li>Manual de Demandas</li>
+        </ul>
+        <h3>Data de atualização: Abril de 2018</h3>
+        <ul>
+            <li>Criação do novo módulo Requerimento </li>
+            <li>Geração de demandas</li>
+            <li>Acompanhamento de demandas</li>
+            <li>Anexos em Requerimento</li>
+            <li>Modificaçõs no módulo "Circular"</li>
+            <li>Anexos em Demandas</li>
+        </ul>
+        <h3>Atualizações: Janeiro - Março de 2018</h3>
+        <ul>
+            <li>Mostrar a palavra "Digital" em Imprimir Movimentação </li>
+            <li>Setor de origem de solicitação na capa do processo</li>
+            <li>Ajustes gerais</li>
+            <li>Correção de bugs</li>
+        </ul>
+        <h3>Data da atualização 16/10/2017</h3>
+        <ul>
+            <li>Log de edição de Interessados </li>
+            <li>Log de edição de Processos</li>
+            <li>Melhorias na geração de arquivo pdf do processo</li>
+            <li>Impressão de movimentação no Protocolo</li>
+            <li>Modificaçõs no módulo "Circular"</li>
+            <li>Correção de bugs</li>
+        </ul>
+            <h3>Data da atualização 21/09/2017</h3>
+            <ul>
+               <li> Criação de setores pelo administrador </li>
+               <li> Ativação e desativação de setores pelo administrador </li>
+               <li> Justificativa na edição do interessado </li>
+               <li> Ajustes na exibição de botões em Resumo </li>
+               <li> Ajustes na exibição da tela principal </li>
+               <li> Ajustes na edição de Perfil </li>
+               <li> Correção de bugs </li>
+
+            </ul>
+
+            <h3>Data da atualização 07/08/2017</h3>
+            <ul>
+                <li>Ajustes em telas</li>
+                <li>Correção de bugs</li>
+            </ul>
+
+            <h3>Data da atualização 26/06/2017</h3>
+            <ul>
+                <li>Ajustes em telas</li>
+                <li>Correção de bugs</li>
+            </ul>
+
+            <h3 style="font-weight: bold">Data da atualização 27/04/2017</h3>
+            <ul>
+                <li> Reestruturação do campo ?Interessado? ? apenas CPF e CNPJ válidos.</li>
+                <li> Setor como origem da solicitação ? associado ao perfil. </li>
+                <li> Acréscimo do campo ?Bairro do Serviço? em ?Pesquisa Avançada de Processos?  </li>
+                <li> Mudança da legenda ?Outras informações? para ?Informações para OS? em Novo Processo. </li>
+                <li> Correção de bugs </li>
+            </ul>
+            <h3 style="font-weight: bold">Data de atualização: 27/03/2017</h3>
+            <ul>
+                <li> Correção no quantitativo de protocolos a receber.</li>
+                <li> Novo módulo "Circular": criação, envio e recebimento de Circulares.</li>
+                <li> Protocolos favoritos destacados em negrito </li>
+                <li> Ajustes na Consulta Pública </li>
+                <li> Correção de Pequenos bugs </li>
+            </ul>
+            <h3 style="font-weight: bold">Data da atualização: 03/03/2017</h3>
+            <ul>
+                <li> Novo relatório "Processos em acompanhamento"</li>
+                <li> Novo relatório "Processos pendentes de recebimento"</li>
+                <li> Novo relatório "Processos originados no órgão"</li>
+                <li> Possibilidade de fixar o(s) setor(es) de recebimento de processos em um órgão. <br /> Isso passará a ser feito através do item "Recebimento de outros órgãos"  <br />  em Administração/Segurança</li>
+                <li> Inclusão de "Hora" ao lado de "Data" na capa do processo.</li>
+                <li> Inclusão do campo "Descrição" na Ficha de Protocolo.</li>
+                <li> Inclusão de rodapé em todos os relatórios, mostrando o caminho e nome do relatório no Gdoc</li>
+                <li> Ajustes de design em todos os relatórios</li>
+                <li> Ajustes na impressão do processo (aumento da margem esquerda)</li>
+                <li> Correção de pequenos bugs</li>
+            </ul>
+            <h3 style="font-weight: bold">Data da atualização: 17/02/2017</h3>
+            <ul>
+                <li>Disponibilização dos manuais de usuário no GDOC</li>
+                <li>Visualização de dados do Interessado sem precisar entrar em Edição</li>
+                <li>Acréscimo de pesquisa por Interessado em Estorno de Encaminhamento</li>
+                <li>Opção de filtrar apenas os processos totalmente Digitais em "Processos neste setor"</li>
+                <li>Opção de filtrar apenas os processos totalmente Digitais em "Pesquisar Processo"</li>
+                <li>Possibilidade de editar os status "Digital" e "Confidencial" <br />  em "Editar informações do Processo" (apenas para quem tem perfil).</li>
+                <li>Adição novos campos de buscar em Pesquisar Processo: Endereço do Serviço  <br /> e Complemento do End. do Serviço</li>
+                <li>Melhorias no "Processos em Acompanhamento"</li>
+                <li>Otimização na geração do arquivo pdf do Processo (Imprimir Processo)</li>
+            </ul>
+        </div></div></div><script id="formMenu:j_idt121_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","ultimasAtualizacoesDialog",{id:"formMenu:j_idt121",draggable:false,modal:true});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form>
+</html>
+		</div>
+		<div id="mensagem">
+<form id="formMsg" name="formMsg" method="post" action="/gdocprocessos/processos/pesquisa" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formMsg" value="formMsg" />
+<div id="msg" class="ui-messages ui-widget" aria-live="polite"></div><script id="msg_s" type="text/javascript">$(function(){PrimeFaces.cw("Messages","widget_msg",{id:"msg"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form>
+		</div>
+		<div id="conteudo">
+		<style type="text/css">
+			* {
+  box-sizing: border-box;
+}
+			
+			.coluna-label{
+				min-width: 200px;
+				display: flex;
+				align-items: center;
+			}
+			
+			
+			.coluna-label-small{
+				min-width: 100px;
+				display: flex;
+				align-items: center;
+			}
+			
+			.coluna-data{
+				width: 100%;
+				margin-right: 10px;
+			}
+			
+			.column{
+				display:flex;
+				flex: 45%;
+				align-items: center;
+			}
+			
+		.filtro-info{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+		}
+			
+		  .painel-pesquisa {
+		    display: flex; 
+		    flex-direction: row; 
+		    justify-content: flex-start; 
+		    align-items: flex-start; 
+		    width:100%;
+		    gap:10px;
+		    
+		  }
+		  
+		  @media screen and (max-width: 1024px) {
+			  .painel-pesquisa {
+			    flex-wrap: wrap !important; 
+			  }
+			  .column{
+				flex: 100%;
+			}
+		  }
+		
+		@media screen and (max-width: 600px) {
+		  .filtro-info-processo {
+		    flex-direction: column;
+		  }
+		}
+		</style><div id="panel" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_panel"><div id="panel_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Processos &gt; Pesquisa Processos </span></div><div id="panel_content" class="ui-panel-content ui-widget-content"><div id="tabview" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-tabs-top" data-widget="widget_tabview"><ul class="ui-tabs-nav ui-helper-reset ui-widget-header ui-corner-all" role="tablist"><li class="ui-tabs-header ui-state-default ui-tabs-selected ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" data-index="0"><a href="#tabview:j_idt129" tabindex="-1">Pesquisa Simples</a></li><li class="ui-tabs-header ui-state-default ui-corner-top" role="tab" aria-expanded="false" aria-selected="false" data-index="1"><a href="#tabview:j_idt137" tabindex="-1">Pesquisa Avançada</a></li></ul><div class="ui-tabs-panels"><div id="tabview:j_idt129" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" data-index="0">
+<form id="tabview:formSimples" name="tabview:formSimples" method="post" action="/gdocprocessos/processos/pesquisa" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="tabview:formSimples" value="tabview:formSimples" />
+<table id="tabview:panelFiltroSimples">
+<tbody>
+<tr>
+<td><label id="tabview:j_idt130" class="ui-outputlabel ui-widget" for="tabview:tfProcesso">Processo:<span class="ui-outputlabel-rfi">*</span></label></td>
+<td><script id="tabview:j_idt131_s" type="text/javascript">$(function(){PrimeFaces.cw("KeyFilter","widget_tabview_j_idt131",{id:"tabview:j_idt131",target:"tabview:tfProcesso",regEx:/[0-9]/i,preventPaste:true});});</script><input id="tabview:tfProcesso" name="tabview:tfProcesso" type="text" style="width: 80px" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " aria-required="true" maxlength="8" /><script id="tabview:tfProcesso_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_tabview_tfProcesso",{id:"tabview:tfProcesso",maxlength:8});});</script></td>
+</tr>
+<tr>
+<td><label id="tabview:j_idt132" class="ui-outputlabel ui-widget" for="tabview:tfAno">Ano:<span class="ui-outputlabel-rfi">*</span></label></td>
+<td><script id="tabview:j_idt133_s" type="text/javascript">$(function(){PrimeFaces.cw("KeyFilter","widget_tabview_j_idt133",{id:"tabview:j_idt133",target:"tabview:tfAno",regEx:/[0-9]/i,preventPaste:true});});</script><input id="tabview:tfAno" name="tabview:tfAno" type="text" value="2026" style="width: 80px" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " aria-required="true" maxlength="4" /><script id="tabview:tfAno_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_tabview_tfAno",{id:"tabview:tfAno",maxlength:4});});</script></td>
+</tr>
+<tr>
+<td><label id="tabview:j_idt134" class="ui-outputlabel ui-widget" for="tabview:tfEntidadeS_focus">Origem:</label></td>
+<td><div id="tabview:tfEntidadeS" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all " aria-owns="tabview:tfEntidadeS_panel" style="width: 60vw" role="combobox" aria-haspopup="listbox" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="tabview:tfEntidadeS_focus" name="tabview:tfEntidadeS_focus" type="text" autocomplete="off" aria-labelledby="tabview:j_idt134" /></div><div class="ui-helper-hidden-accessible"><select id="tabview:tfEntidadeS_input" name="tabview:tfEntidadeS_input" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Origem"><option value="" data-escape="true">TODAS</option><option value="ADIC-AGENCIA DISTRITAL DE ICOARACI" data-escape="true">ADIC-AGENCIA DISTRITAL DE ICOARACI</option><option value="ADMOS - AGÊNCIA DISTRITAL DE MOSQUEIRO" data-escape="true">ADMOS - AGÊNCIA DISTRITAL DE MOSQUEIRO</option><option value="ARBEL" data-escape="true">ARBEL</option><option value="AROUT" data-escape="true">AROUT</option><option value="BELÉM DIGITAL" data-escape="true">BELÉM DIGITAL</option><option value="CGM" data-escape="true">CGM</option><option value="CODEM" data-escape="true">CODEM</option><option value="COMDAC" data-escape="true">COMDAC</option><option value="FUNPAPA" data-escape="true">FUNPAPA</option><option value="GABINETE DO PREFEITO" data-escape="true">GABINETE DO PREFEITO</option><option value="GABVP" data-escape="true">GABVP</option><option value="GMB" data-escape="true">GMB</option><option value="IASB" data-escape="true">IASB</option><option value="IPMB" data-escape="true">IPMB</option><option value="OGM" data-escape="true">OGM</option><option value="PGM" data-escape="true">PGM</option><option value="PROMABEN" data-escape="true">PROMABEN</option><option value="SEAPE" data-escape="true">SEAPE</option><option value="SECOM" data-escape="true">SECOM</option><option value="SECT" data-escape="true">SECT</option><option value="SECULT" data-escape="true">SECULT</option><option value="SEDCON" data-escape="true">SEDCON</option><option value="SEFIN" data-escape="true">SEFIN</option><option value="SEGBEL" data-escape="true">SEGBEL</option><option value="SEGEP" selected="selected" data-escape="true">SEGEP</option><option value="SEGOV" data-escape="true">SEGOV</option><option value="SEHAB" data-escape="true">SEHAB</option><option value="SEINFRA" data-escape="true">SEINFRA</option><option value="SEJEL" data-escape="true">SEJEL</option><option value="SEMCAD" data-escape="true">SEMCAD</option><option value="SEMEC" data-escape="true">SEMEC</option><option value="SEMIAC" data-escape="true">SEMIAC</option><option value="SEMMA" data-escape="true">SEMMA</option><option value="SEMTE" data-escape="true">SEMTE</option><option value="SEMU" data-escape="true">SEMU</option><option value="SEPDA" data-escape="true">SEPDA</option><option value="SESMA" data-escape="true">SESMA</option><option value="SETUR" data-escape="true">SETUR</option><option value="SEZEL" data-escape="true">SEZEL</option><option value="- NAO VALIDO PROMABEN" data-escape="true">[Inativo] - NAO VALIDO PROMABEN</option><option value="COMUS" data-escape="true">[Inativo] COMUS</option><option value="FMAE" data-escape="true">[Inativo] FMAE</option><option value="FUMBEL" data-escape="true">[Inativo] FUMBEL</option><option value="FUNBOSQUE" data-escape="true">[Inativo] FUNBOSQUE</option><option value="SEMOB" data-escape="true">[Inativo] SEMOB</option></select></div><label id="tabview:tfEntidadeS_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Origem&nbsp;</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div><div id="tabview:tfEntidadeS_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container"><input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" id="tabview:tfEntidadeS_filter" name="tabview:tfEntidadeS_filter" type="text" autocomplete="off" aria-autocomplete="list" aria-controls="tabview:tfEntidadeS_table" aria-label="Filtro" /><span class="ui-icon ui-icon-search"></span></div><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"></div></div></div><script id="tabview:tfEntidadeS_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_tabview_tfEntidadeS",{id:"tabview:tfEntidadeS",appendTo:"@(body)",label:"Origem",renderPanelContentOnClient:true,filter:true,filterMatchMode:"contains"});});</script></td>
+</tr>
+</tbody>
+</table>
+<button id="tabview:pesProcesso" name="tabview:pesProcesso" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-priority-primary" onclick="PrimeFaces.bcn(this,event,[function(event){PF('dataList').paginator.setPage(0)},function(event){PrimeFaces.ab({s:&quot;tabview:pesProcesso&quot;,f:&quot;tabview:formSimples&quot;,p:&quot;tabview:formSimples&quot;,u:&quot;dataList&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Pesquisar</span></button><script id="tabview:pesProcesso_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","pesProcesso",{id:"tabview:pesProcesso"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form></div><div id="tabview:j_idt137" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden" role="tabpanel" aria-hidden="true" data-index="1"></div></div><input id="tabview_activeIndex" name="tabview_activeIndex" type="hidden" autocomplete="off" aria-hidden="true" value="0" /></div><script id="tabview_s" type="text/javascript">$(function(){PrimeFaces.cw("TabView","widget_tabview",{id:"tabview",dynamic:true,cache:true,effectDuration:"normal",scrollable:false,behaviors:{tabChange:function(ext,event) {PrimeFaces.ab({s:"tabview",e:"tabChange",p:"tabview"},ext);}}});});</script>
+
+			<br />
+<form id="formProcessos" name="formProcessos" method="post" action="/gdocprocessos/processos/pesquisa" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formProcessos" value="formProcessos" />
+<button id="xls" name="xls" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="" style="margin-bottom:15px" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-print"></span><span class="ui-button-text ui-c">Exporta XLS</span></button><script id="xls_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_xls",{id:"xls"});});</script><div id="dataList" class="ui-datatable ui-widget"><div id="dataList_paginator_top" class="ui-paginator ui-paginator-top ui-widget-header ui-corner-top" role="navigation" aria-label="Paginação"><span class="ui-paginator-current">Página 1 de 1 | Total de registros 0</span> <a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="Primeira página" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Página anterior" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a><span class="ui-paginator-pages"></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled" aria-label="Próxima página" tabindex="-1"><span class="ui-icon ui-icon-seek-next">N</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all ui-state-disabled" aria-label="Última página" tabindex="-1"><span class="ui-icon ui-icon-seek-end">E</span></a><label id="dataList:j_id12_rppLabel" for="dataList:j_id12" class="ui-paginator-rpp-label ui-helper-hidden">Linhas por página</label><select id="dataList:j_id12" name="dataList_rppDD" aria-labelledby="dataList:j_id12_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" autocomplete="off"><option value="10" selected="selected">10</option><option value="20">20</option><option value="30">30</option></select></div><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="dataList_head"><tr role="row"><th id="dataList:j_idt204" class="ui-state-default mobile-none" role="columnheader" aria-label="Processo" scope="col"><span class="ui-column-title">Processo</span></th><th id="dataList:j_idt209" class="ui-state-default ui-sortable-column mobile-none" role="columnheader" aria-label="Tipo de Processo" scope="col"><span class="ui-column-title">Tipo de Processo</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span><span class="ui-sortable-column-badge ui-helper-hidden"></span></th><th id="dataList:j_idt212" class="ui-state-default ui-sortable-column mobile-none" role="columnheader" aria-label="Interessado" scope="col"><span class="ui-column-title">Interessado</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span><span class="ui-sortable-column-badge ui-helper-hidden"></span></th><th id="dataList:j_idt216" class="ui-state-default mobile-none" role="columnheader" aria-label="CPF/CNPJ" scope="col"><span class="ui-column-title">CPF/CNPJ</span></th><th id="dataList:j_idt219" class="ui-state-default mobile-none" role="columnheader" aria-label="Confidencial " scope="col" style="width: 5%"><span class="ui-column-title">Confidencial </span></th><th id="dataList:j_idt223" class="ui-state-default mobile-none" role="columnheader" aria-label="Instrução Inicial" scope="col"><span class="ui-column-title">Instrução Inicial</span></th><th id="dataList:j_idt226" class="ui-state-default mobile-none" role="columnheader" aria-label="Opções" scope="col" style="width: 175px"><span class="ui-column-title">Opções</span></th><th id="dataList:j_idt240" class="ui-state-default mobile" role="columnheader" aria-label="Informações" scope="col"><span class="ui-column-title">Informações</span></th></tr></thead><tbody id="dataList_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="8">Nenhum registro encontrado.</td></tr></tbody></table></div><div id="dataList_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Paginação"><span class="ui-paginator-current">Página 1 de 1 | Total de registros 0</span> <a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="Primeira página" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Página anterior" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a><span class="ui-paginator-pages"></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled" aria-label="Próxima página" tabindex="-1"><span class="ui-icon ui-icon-seek-next">N</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all ui-state-disabled" aria-label="Última página" tabindex="-1"><span class="ui-icon ui-icon-seek-end">E</span></a><label id="dataList:j_id13_rppLabel" for="dataList:j_id13" class="ui-paginator-rpp-label ui-helper-hidden">Linhas por página</label><select id="dataList:j_id13" name="dataList_rppDD" aria-labelledby="dataList:j_id13_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" autocomplete="off"><option value="10" selected="selected">10</option><option value="20">20</option><option value="30">30</option></select></div></div><script id="dataList_s" type="text/javascript">$(function(){PrimeFaces.cw("DataTable","dataList",{id:"dataList",paginator:{id:['dataList_paginator_top','dataList_paginator_bottom'],rows:10,rowCount:0,page:0,currentPageTemplate:'Página {currentPage} de {totalPages} | Total de registros {totalRecords}'},sorting:true,multiSort:true,sortMetaOrder:[''],groupColumnIndexes:[],disableContextMenuIfEmpty:false});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:4" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form></div></div><script id="panel_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_panel",{id:"panel"});});</script><div id="dialog_resumo_enc" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container dialog-mobile"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="dialog_resumo_enc_title" class="ui-dialog-title">Resumo do Encaminhamento</span></div><div class="ui-dialog-content ui-widget-content" id="dialog_resumo_enc_content">
+<form id="formResumoEncaminhamento" name="formResumoEncaminhamento" method="post" action="/gdocprocessos/processos/pesquisa" accept-charset="ISO-8859-1" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formResumoEncaminhamento" value="formResumoEncaminhamento" />
+<div id="j_idt309" class="ui-messages ui-widget" aria-live="polite"></div><script id="j_idt309_s" type="text/javascript">$(function(){PrimeFaces.cw("Messages","widget_j_idt309",{id:"j_idt309"});});</script><div id="j_idt310" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt310"><div id="j_idt310_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Dados do Processo</span></div><div id="j_idt310_content" class="ui-panel-content ui-widget-content"><table>
+<tbody>
+<tr>
+<td><label id="j_idt312" class="ui-outputlabel ui-widget">Processo:</label></td>
+<td><span style="font-weight: bold;">/ - </span></td>
+</tr>
+<tr>
+<td><label id="j_idt314" class="ui-outputlabel ui-widget">Interessado:</label></td>
+<td><span style="font-weight: bold;">SEM INTERESSADO</span></td>
+</tr>
+<tr>
+<td><label id="j_idt319" class="ui-outputlabel ui-widget">Tipo do Processo:</label></td>
+<td><span style="font-weight: bold;"></span></td>
+</tr>
+<tr>
+<td><label id="j_idt321" class="ui-outputlabel ui-widget">Descrição:</label></td>
+<td><span style="font-weight: bold;"></span></td>
+</tr>
+<tr>
+<td><label id="j_idt324" class="ui-outputlabel ui-widget">Data de Abertura:</label></td>
+<td><span style="font-weight: bold;"></span></td>
+</tr>
+</tbody>
+</table>
+</div></div><script id="j_idt310_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_j_idt310",{id:"j_idt310"});});</script>
+					<br /><div id="j_idt331" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt331"><div id="j_idt331_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Dados do Encaminhamento</span></div><div id="j_idt331_content" class="ui-panel-content ui-widget-content"><table>
+<tbody>
+<tr>
+<td>De (Setor / Entidade):</td>
+<td><span style="font-weight: bold"> / </span></td>
+</tr>
+<tr>
+<td>Para (Setor / Entidade):</td>
+<td><span style="font-weight: bold"> / </span></td>
+</tr>
+<tr>
+<td>Data do Encaminhamento:</td>
+<td><span style="font-weight: bold"></span></td>
+</tr>
+<tr>
+<td>Encaminhado Por:</td>
+<td><span style="font-weight: bold"></span></td>
+</tr>
+</tbody>
+</table>
+</div></div><script id="j_idt331_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_j_idt331",{id:"j_idt331"});});</script>
+					
+					
+					<br /><div id="j_idt344" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt344"><div id="j_idt344_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Despacho</span></div><div id="j_idt344_content" class="ui-panel-content ui-widget-content"><span style="max-height:500px; overflow:auto;display:block"></span></div></div><script id="j_idt344_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_j_idt344",{id:"j_idt344"});});</script>
+					<br />
+					<br />
+					
+					<div style="display: flex;flex-direction: column; justify-content: center; align-items: center; width: 100%; gap:20px"><button id="j_idt364" name="j_idt364" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.bcn(this,event,[function(event){PF('dlgResumoEnc').hide()},function(event){PrimeFaces.ab({s:&quot;j_idt364&quot;,e:&quot;click&quot;,f:&quot;formResumoEncaminhamento&quot;,p:&quot;j_idt364&quot;,u:&quot;msg&quot;});}]);" title="Fechar pop-up" type="button"><span class="ui-button-icon-left ui-icon ui-c pi pi-times"></span><span class="ui-button-text ui-c">Ok</span></button><script id="j_idt364_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt364",{id:"j_idt364",behaviors:{click:function(ext,event) {PrimeFaces.ab({s:"j_idt364",e:"click",f:"formResumoEncaminhamento",p:"j_idt364",u:"msg"},ext);}}});});</script><button id="j_idt365" name="j_idt365" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-warning" data-pfconfirmcommand="PrimeFaces.bcn(this,event,[function(event){PrimeFaces.ab({s:&quot;j_idt365&quot;,e:&quot;click&quot;,f:&quot;formResumoEncaminhamento&quot;,p:&quot;j_idt365&quot;,u:&quot;dataList&quot;});}]);" onclick="PrimeFaces.confirm({source:&quot;j_idt365&quot;,type:&quot;dialog&quot;,escape:true,header:&quot;Confirmar estorno de Encaminhamento&quot;,message:&quot;Deseja Estornar último encaminhamento?&quot;,icon:&quot;ui-icon-alert&quot;,beforeShow:&quot;&quot;});return false;" title="Clique aqui para estornar o encaminhamento" type="button"><span class="ui-button-icon-left ui-icon ui-c pi pi-undo"></span><span class="ui-button-text ui-c">Estornar Encaminhamento</span></button><script id="j_idt365_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt365",{id:"j_idt365",behaviors:{click:function(ext,event) {PrimeFaces.bcnu(ext,event,[function(ext,event) {PrimeFaces.ab({s:"j_idt365",e:"click",f:"formResumoEncaminhamento",p:"j_idt365",u:"dataList"},ext);}]);}}});});</script>
+					</div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:5" value="7019144285413673059:9202971262688681866" autocomplete="off" />
+</form></div></div><script id="dialog_resumo_enc_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dlgResumoEnc",{id:"dialog_resumo_enc",modal:true,width:"900",height:"600"});});</script><div id="j_idt367" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt367_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Fechar"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="j_idt367_content"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt368" name="j_idt368" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span class="ui-button-text ui-c">Confirmar</span></button><script id="j_idt368_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt368",{id:"j_idt368"});});</script><button id="j_idt369" name="j_idt369" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-close"></span><span class="ui-button-text ui-c">Cancelar</span></button><script id="j_idt369_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt369",{id:"j_idt369"});});</script></div></div><script id="j_idt367_s" type="text/javascript">$(function(){PrimeFaces.cw("ConfirmDialog","widget_j_idt367",{id:"j_idt367",showEffect:"fade",hideEffect:"fade",global:true});});</script>
+		
+ 		<script type="text/JavaScript">
+            function up(lstr){ // converte minusculas em maiusculas
+                var str=lstr.value; //obtem o valor
+                lstr.value=str.toUpperCase(); //converte as strings e retorna ao campo
+            }
+        </script>
+		</div><div id="j_idt372"></div><script id="j_idt372_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt372",{id:"j_idt372",delay:0,start:function(){PF('statusDialog').show()},error:function(){PF('statusDialog').hide()},complete:function(){PF('statusDialog').hide()}});});</script><div id="j_idt373" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-content ui-widget-content" id="j_idt373_content"><div id="j_idt374" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:235px;" data-widget="widget_j_idt374"><div id="j_idt374_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Carregando...</span></div><div id="j_idt374_content" class="ui-panel-content ui-widget-content"><img id="j_idt375" src="/gdocprocessos/img/loader.gif?pfdrid_c=true" alt="" /></div></div><script id="j_idt374_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_j_idt374",{id:"j_idt374"});});</script></div></div><script id="j_idt373_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","statusDialog",{id:"j_idt373",draggable:false,resizable:false,modal:true});});</script>
+
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-57312831-3', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<script src="/gdocprocessos/js/funcoes.js" type="application/javascript"></script></body>
+</html>
