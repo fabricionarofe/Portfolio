@@ -1,0 +1,18 @@
+# Dependências
+node_modules/
+venv/
+__pycache__/
+
+# Variáveis de Ambiente
+.env
+secrets.json
+
+# Builds
+build/
+dist/
+
+# IDEs e SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

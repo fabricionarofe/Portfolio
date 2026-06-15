@@ -1,0 +1,1 @@
+# Liste as dependências e bibliotecas do projeto aqui (ex: flask==2.0.1)
