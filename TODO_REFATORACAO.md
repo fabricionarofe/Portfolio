@@ -1,8 +1,8 @@
-# 🛠️ Débito Técnico: Arquivos Duplicados
+# Debito Tecnico: Arquivos Duplicados
 
-Esses arquivos possuem exatamente o mesmo código. Para manter o Princípio DRY, unifique-os em um utilitário comum e importe onde for necessário para limpar seu código.
+Esses arquivos possuem exatamente o mesmo codigo. Para manter o Principio DRY, unifique-os em um utilitario comum e importe onde for necessario para limpar seu codigo.
 
-### 🗂️ Duplicata encontrada:
+### Duplicata encontrada:
 - `automacao-de-mensagem\.gitignore`
 - `reconhecimento-facial\.gitignore`
 - `sistema-de-contratos\.gitignore`
@@ -10,7 +10,7 @@ Esses arquivos possuem exatamente o mesmo código. Para manter o Princípio DRY,
 - `site-de-vendas\.gitignore`
 - `web-scraping-gdoc\.gitignore`
 
-### 🗂️ Duplicata encontrada:
+### Duplicata encontrada:
 - `automacao-de-mensagem\requirements.txt`
 - `reconhecimento-facial\requirements.txt`
 - `sistema-de-contratos\requirements.txt`
@@ -18,7 +18,7 @@ Esses arquivos possuem exatamente o mesmo código. Para manter o Princípio DRY,
 - `site-de-vendas\requirements.txt`
 - `web-scraping-gdoc\requirements.txt`
 
-### 🗂️ Duplicata encontrada:
+### Duplicata encontrada:
 - `automacao-de-mensagem\__version__.py`
 - `automacao-de-mensagem\src\__version__.py`
 - `reconhecimento-facial\__version__.py`
@@ -27,7 +27,7 @@ Esses arquivos possuem exatamente o mesmo código. Para manter o Princípio DRY,
 - `site-de-vendas\__version__.py`
 - `web-scraping-gdoc\__version__.py`
 
-### 🗂️ Duplicata encontrada:
+### Duplicata encontrada:
 - `sistema-de-contratos\main.py`
 - `SistemaPatrimonio\main.py`
 

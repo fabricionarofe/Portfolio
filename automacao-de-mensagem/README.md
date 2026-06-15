@@ -1,19 +1,19 @@
-# 🚀 Automacao De Mensagem
+# Automacao De Mensagem
 
-![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
+!Status
+!License
 
-## 📖 Sobre o Projeto
-Este projeto faz parte do meu portfólio de Engenharia de Software. Ele foi reestruturado para seguir boas práticas de arquitetura, código limpo e segurança de repositório (remoção de dados sensíveis e credenciais).
+## Sobre o Projeto
+Este projeto integra meu portfolio pessoal de Engenharia de Software. O codigo foi reestruturado com foco em boas praticas de arquitetura, manutenibilidade e seguranca, garantindo a remocao de dados sensiveis e a aplicacao de principios de codigo limpo.
 
-## ✨ Funcionalidades e Boas Práticas
-- [x] Estrutura modular e escalável
-- [x] Código protegido e validado contra vazamentos
-- [x] Tratamento de débitos técnicos (Princípio DRY)
+## Destaques Tecnicos
+- Estrutura modular e escalavel.
+- Padronizacao de boas praticas e mitigacao de vazamentos de credenciais.
+- Tratamento de debitos tecnicos focado no Principio DRY.
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
-1. Clone o repositório.
-2. Navegue até a pasta `automacao-de-mensagem`.
-3. Instale as dependências (via `requirements.txt` ou equivalente).
-4. Execute o arquivo principal (`main.py` ou `index.js`).
+1. Clone este repositorio em sua maquina local.
+2. Navegue ate a pasta `automacao-de-mensagem`.
+3. Instale as dependencias listadas no arquivo de configuracao.
+4. Inicie a aplicacao atraves do arquivo principal (ex: `main.py` ou `index.js`).
