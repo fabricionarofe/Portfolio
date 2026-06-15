@@ -3,6 +3,22 @@
 Esses arquivos possuem exatamente o mesmo código. Para manter o Princípio DRY, unifique-os em um utilitário comum e importe onde for necessário para limpar seu código.
 
 ### 🗂️ Duplicata encontrada:
+- `automacao-de-mensagem\.gitignore`
+- `reconhecimento-facial\.gitignore`
+- `sistema-de-contratos\.gitignore`
+- `SistemaPatrimonio\.gitignore`
+- `site-de-vendas\.gitignore`
+- `web-scraping-gdoc\.gitignore`
+
+### 🗂️ Duplicata encontrada:
+- `automacao-de-mensagem\requirements.txt`
+- `reconhecimento-facial\requirements.txt`
+- `sistema-de-contratos\requirements.txt`
+- `SistemaPatrimonio\requirements.txt`
+- `site-de-vendas\requirements.txt`
+- `web-scraping-gdoc\requirements.txt`
+
+### 🗂️ Duplicata encontrada:
 - `automacao-de-mensagem\__version__.py`
 - `automacao-de-mensagem\src\__version__.py`
 - `reconhecimento-facial\__version__.py`
