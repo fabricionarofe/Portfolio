@@ -1,41 +1,91 @@
-# Portfólio de Engenharia de Software
+﻿<div align="center">
 
-Bem-vindo ao meu repositório central de projetos. Este espaço atua como um catálogo das minhas soluções tecnológicas, desenvolvidas com forte embasamento em boas práticas de engenharia de software, arquitetura limpa e automação.
+<img src="https://github.com/fabricionarofe.png" width="120" style="border-radius:50%;" alt="Fabrício Ferreira"/>
 
-## Visão Geral do Repositório
+# 👋 Hi, I'm Fabrício Ferreira
 
-Todo o código-fonte contido neste repositório passou por um rigoroso processo de auditoria e padronização. A infraestrutura de cada aplicação foi estruturada para garantir:
+**Software Developer · Data Engineer · Economics Researcher**
 
-- **Segurança Ativa:** Ofuscamento sistemático de credenciais, chaves de API e dados sensíveis antes do versionamento.
-- **Manutenibilidade:** Aplicação de princípios de código limpo, mitigação de débitos técnicos (Princípio DRY) e isolamento de responsabilidades em camadas lógicas (ex: `backend`, `frontend`, `src`).
-- **Reprodutibilidade:** Gestão explícita de dependências em cada projeto, garantindo que o ambiente local possa ser recriado com precisão.
-- **Confiabilidade:** Validação contínua através de simulações de execução (Smoke Tests).
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabricio-ferreira-ab1b2a223/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/fabricionarofe)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fabricionarofe@hotmail.com)
 
-## Catálogo de Projetos
-
-Abaixo estão os principais projetos disponíveis neste repositório, categorizados por área de domínio:
-
-### 1. Automação e Processamento de Dados
-* **Web Scraping GDOC:** Solução para extração, tratamento e processamento automatizado de dados.
-* **Automação de Mensagem:** Sistema de comunicação programada focado na redução de esforço operacional manual.
-
-### 2. Visão Computacional e Inteligência Artificial
-* **Reconhecimento Facial:** Aplicação focada em processamento avançado de imagem, análise computacional e identificação de padrões biométricos.
-
-### 3. Sistemas Corporativos e de Gestão
-* **Sistema de Contratos:** Plataforma administrativa desenvolvida para trazer controle, transparência e rastreabilidade para os processos internos.
-* **Sistema de Patrimônio:** Ferramenta corporativa para controle, auditoria e gestão eficiente de ativos organizacionais.
-* **Controle de Identificação:** Sistema focado no gerenciamento e validação de fluxo de pessoas em ambientes físicos.
-
-### 4. Desenvolvimento Web e E-commerce
-* **Site de Vendas:** Plataforma transacional projetada para exibição de serviços e otimização da experiência de compra digital do usuário final.
-
-## Como Navegar e Executar
-
-Cada projeto listado acima possui seu próprio diretório isolado e autossuficiente. Para mergulhar nos detalhes técnicos de uma solução específica:
-
-1. Acesse a pasta correspondente ao projeto de interesse.
-2. Leia o arquivo `README.md` interno, que detalha a arquitetura daquela aplicação específica, as decisões técnicas tomadas e o passo a passo exato para instalação e execução local.
+</div>
 
 ---
-*Repositório mantido com o objetivo de demonstrar maturidade técnica, capacidade de resolução de problemas complexos e domínio do ciclo de vida de desenvolvimento de software.*
+
+## About Me
+
+I'm a Software Developer and Data Engineer based in Belém, Pará, Brazil 🇧🇷 with a strong background in building scalable backend systems, automating data pipelines, and applying software engineering best practices to solve real-world institutional challenges.
+
+My experience spans **full-stack web development**, **database architecture and optimization**, **Python automation**, and **Computer Vision** — all applied in production environments serving thousands of users at the City Hall of Belém (PMB/SEGEP) and international research projects.
+
+I hold a Bachelor's degree in Economics from UFPA and am currently completing a Master's degree in Regional and Urban Development, which gives me a unique combination of **analytical rigor** and **technical depth** when designing software solutions.
+
+---
+
+## 🛠️ Tech Stack
+
+| Area | Technologies |
+|---|---|
+| **Backend** | PHP 7.2+, Python 3.x, Node.js |
+| **Frontend** | JavaScript, jQuery, Semantic UI, HTML5, CSS3 |
+| **Databases** | MySQL (Advanced Queries & Indexing), SQL, ElasticSearch |
+| **Data & Analysis** | Python (Pandas, NumPy), R, Power BI, Google Looker Studio |
+| **Computer Vision** | OpenCV, face_recognition |
+| **DevOps & Tools** | Git, GitHub, AWS (basics), XAMPP, VS Code |
+| **CMS & Frameworks** | WordPress (Plugins & Themes), MVC Architecture |
+
+---
+
+## 📂 Project Catalog
+
+This repository is a curated collection of projects I've built — each one solving a real problem with a production mindset.
+
+### 🤖 Automation & Data Processing
+| Project | Description | Tech |
+|---|---|---|
+| [web-scraping-gdoc](./web-scraping-gdoc/) | Automated pipeline to scrape, process, and export structured data to Google Docs/Sheets | Python, BeautifulSoup |
+| [automacao-de-mensagem](./automacao-de-mensagem/) | Scheduled messaging automation to reduce manual operational overhead | Python |
+
+### 👁️ Computer Vision & AI
+| Project | Description | Tech |
+|---|---|---|
+| [reconhecimento-facial](./reconhecimento-facial/) | Biometric identification system with facial recognition for controlled-access environments | Python, OpenCV |
+
+### 🏢 Corporate & Management Systems
+| Project | Description | Tech |
+|---|---|---|
+| [sistema-de-contratos](./sistema-de-contratos/) | Contract management platform with traceability and auditability | Python, MySQL |
+| [SistemaPatrimonio](./SistemaPatrimonio/) | Asset management and auditing system for organizational patrimony control | Python |
+
+### 🌐 Web Development
+| Project | Description | Tech |
+|---|---|---|
+| [site-de-vendas](./site-de-vendas/) | Sales platform for showcasing services and optimizing digital purchasing experience | PHP, MySQL, HTML/CSS/JS |
+
+### 🆕 PHP Portfolio
+| Project | Description | Tech |
+|---|---|---|
+| [php-crud-semantic-ui](./php-crud-semantic-ui/) | Full CRUD with PHP 7.2+, PDO, MySQL, Semantic UI, CSRF & XSS protection | PHP, MySQL, Semantic UI |
+| [wp-plugin-cotacoes](./wp-plugin-cotacoes/) | WordPress plugin built with OOP, custom Shortcode, and WordPress Hooks | PHP, WordPress |
+
+---
+
+## 📐 Engineering Standards
+
+Every project here was built or refactored following these principles:
+
+- **Security First:** No hardcoded credentials. Sensitive data managed via environment variables and .gitignore.
+- **Clean Code & DRY:** Responsibility separation across logical layers (src/, ackend/, rontend/).
+- **SQL Optimization:** Queries use prepared statements (PDO), indexed columns, and EXPLAIN-validated performance.
+- **CSRF & XSS Protection:** Web-facing forms are protected against Cross-Site Request Forgery and Cross-Site Scripting.
+- **Dependency Reproducibility:** All external dependencies documented in equirements.txt or composer.json.
+
+---
+
+## 📬 Get In Touch
+
+Open to **remote contracting opportunities** in Backend PHP, Python, Data Engineering, or AI Data Labeling.
+
+📧 **fabricionarofe@hotmail.com** | 📱 **(91) 98297-6373** | 📍 Belém, Pará — Brazil
