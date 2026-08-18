@@ -1,10 +1,10 @@
 ﻿<div align="center">
 
-<img src="https://github.com/fabricionarofe.png" width="120" style="border-radius:50%;" alt="Fabrício Ferreira"/>
+<img src="https://github.com/fabricionarofe.png" width="120" style="border-radius:50%;" alt="Fabricio Ferreira"/>
 
-# 👋 Hi, I'm Fabrício Ferreira
+# Hi, I'm Fabricio Ferreira
 
-**Software Developer · Data Engineer · Economics Researcher**
+**Software Developer | Data Engineer | Economics Researcher**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabricio-ferreira-ab1b2a223/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/fabricionarofe)
@@ -16,15 +16,15 @@
 
 ## About Me
 
-I'm a Software Developer and Data Engineer based in Belém, Pará, Brazil 🇧🇷 with a strong background in building scalable backend systems, automating data pipelines, and applying software engineering best practices to solve real-world institutional challenges.
+I'm a Software Developer and Data Engineer based in Belem, Para, Brazil with a strong background in building scalable backend systems, automating data pipelines, and applying software engineering best practices to solve real-world institutional challenges.
 
-My experience spans **full-stack web development**, **database architecture and optimization**, **Python automation**, and **Computer Vision** — all applied in production environments serving thousands of users at the City Hall of Belém (PMB/SEGEP) and international research projects.
+My experience spans **full-stack web development**, **database architecture and optimization**, **Python automation**, and **Computer Vision** — all applied in production environments serving thousands of users at the City Hall of Belem (PMB/SEGEP) and international research projects.
 
 I hold a Bachelor's degree in Economics from UFPA and am currently completing a Master's degree in Regional and Urban Development, which gives me a unique combination of **analytical rigor** and **technical depth** when designing software solutions.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Area | Technologies |
 |---|---|
@@ -38,41 +38,41 @@ I hold a Bachelor's degree in Economics from UFPA and am currently completing a 
 
 ---
 
-## 📂 Project Catalog
+## Project Catalog
 
 This repository is a curated collection of projects I've built — each one solving a real problem with a production mindset.
 
-### 🤖 Automation & Data Processing
+### Automation & Data Processing
 | Project | Description | Tech |
 |---|---|---|
-| [web-scraping-gdoc](./web-scraping-gdoc/) | Automated pipeline to scrape, process, and export structured data to Google Docs/Sheets | Python, BeautifulSoup |
-| [automacao-de-mensagem](./automacao-de-mensagem/) | Scheduled messaging automation to reduce manual operational overhead | Python |
+| [gdoc-web-scraper](./gdoc-web-scraper/) | Automated pipeline to scrape, process, and export structured data to Google Docs/Sheets | Python, BeautifulSoup |
+| [message-automation](./message-automation/) | Scheduled messaging automation to reduce manual operational overhead | Python |
 
-### 👁️ Computer Vision & AI
+### Computer Vision & AI
 | Project | Description | Tech |
 |---|---|---|
-| [reconhecimento-facial](./reconhecimento-facial/) | Biometric identification system with facial recognition for controlled-access environments | Python, OpenCV |
+| [facial-recognition](./facial-recognition/) | Biometric identification system with facial recognition for controlled-access environments | Python, OpenCV |
 
-### 🏢 Corporate & Management Systems
+### Corporate & Management Systems
 | Project | Description | Tech |
 |---|---|---|
-| [sistema-de-contratos](./sistema-de-contratos/) | Contract management platform with traceability and auditability | Python, MySQL |
-| [SistemaPatrimonio](./SistemaPatrimonio/) | Asset management and auditing system for organizational patrimony control | Python |
+| [contract-management-system](./contract-management-system/) | Contract management platform with traceability and auditability | Python, MySQL |
+| [asset-management-system](./asset-management-system/) | Asset management and auditing system for organizational patrimony control | Python |
 
-### 🌐 Web Development
+### Web Development
 | Project | Description | Tech |
 |---|---|---|
-| [site-de-vendas](./site-de-vendas/) | Sales platform for showcasing services and optimizing digital purchasing experience | PHP, MySQL, HTML/CSS/JS |
+| [sales-platform](./sales-platform/) | Sales platform for showcasing services and optimizing digital purchasing experience | PHP, MySQL, HTML/CSS/JS |
 
-### 🆕 PHP Portfolio
+### PHP Portfolio
 | Project | Description | Tech |
 |---|---|---|
-| [php-crud-semantic-ui](./php-crud-semantic-ui/) | Full CRUD with PHP 7.2+, PDO, MySQL, Semantic UI, CSRF & XSS protection | PHP, MySQL, Semantic UI |
-| [wp-plugin-cotacoes](./wp-plugin-cotacoes/) | WordPress plugin built with OOP, custom Shortcode, and WordPress Hooks | PHP, WordPress |
+| [php-course-management](./php-course-management/) | Full CRUD with PHP 7.2+, PDO, MySQL, Semantic UI, CSRF & XSS protection | PHP, MySQL, Semantic UI |
+| [wp-currency-quote-plugin](./wp-currency-quote-plugin/) | WordPress plugin built with OOP, custom Shortcode, and WordPress Hooks | PHP, WordPress |
 
 ---
 
-## 📐 Engineering Standards
+## Engineering Standards
 
 Every project here was built or refactored following these principles:
 
@@ -84,8 +84,8 @@ Every project here was built or refactored following these principles:
 
 ---
 
-## 📬 Get In Touch
+## Get In Touch
 
 Open to **remote contracting opportunities** in Backend PHP, Python, Data Engineering, or AI Data Labeling.
 
-📧 **fabricionarofe@hotmail.com** | 📱 **(91) 98297-6373** | 📍 Belém, Pará — Brazil
+**Email:** fabricionarofe@hotmail.com | **Phone:** (91) 98297-6373 | **Location:** Belem, Para — Brazil
